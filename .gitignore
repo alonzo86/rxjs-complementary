@@ -1,0 +1,5 @@
+.idea
+bundles
+coverage
+dist
+node_modules
