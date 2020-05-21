@@ -1,6 +1,6 @@
 {
   "name": "rxjs-complementary",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Complementary package for rxjs",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -50,8 +50,12 @@
   "author": "Alon Yampolski <yampolski.a@gmail.com>",
   "license": "ISC",
   "files": [
-    "dist",
+    "dist/cjs/**/!(*.tsbuildinfo)",
+    "dist/esm/**/!(*.tsbuildinfo)",
     "src",
+    "operators",
+    "LICENSE.txt",
+    "README.md",
     "package.json",
     "tsconfig.json"
   ]
