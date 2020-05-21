@@ -1,6 +1,6 @@
 {
   "name": "rxjs-complementary",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Complementary package for rxjs",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -15,6 +15,16 @@
     "lint": "tslint --project tsconfig.json \"src/**/*.ts\"",
     "test": "karma start"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alonzo86/rxjs-complementary.git"
+  },
+  "keywords": [
+    "rxjs",
+    "complementary",
+    "operators"
+  ],
+  "homepage": "https://github.com/alonzo86/rxjs-complementary",
   "sideEffects": false,
   "types": "./dist/esm/index.d.ts",
   "unpkg": "./bundles/rxjs-complementary.min.umd.js",
@@ -48,7 +58,7 @@
     "tag": "latest"
   },
   "author": "Alon Yampolski <yampolski.a@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "dist/cjs/**/!(*.tsbuildinfo)",
     "dist/esm/**/!(*.tsbuildinfo)",
