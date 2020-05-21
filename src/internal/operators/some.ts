@@ -62,7 +62,7 @@ class SomeOperator<T> implements Operator<T, boolean> {
  * A simple example emitting true if single element is less than 5, false otherwise
  * ```ts
  * import { of } from 'rxjs';
- * import { some } from 'rxjs/operators';
+ * import { some } from 'rxjs-complementary/operators';
  *
  *  of(20, 10, 8, 2, 1000, 1).pipe(
  *     some(x => x < 5),

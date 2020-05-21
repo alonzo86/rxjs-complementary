@@ -41,17 +41,17 @@ class SkipEveryOperator<T> implements Operator<T, T> {
  * A simple example emitting every 2 elements
  * ```ts
  * import { of } from 'rxjs';
- * import { some } from 'rxjs/operators';
+ * import { skipEvery } from 'rxjs-complementary/operators';
  *
  *  of(1, 2, 3, 4, 5, 6, 7, 8, 9).pipe(
- *     some(x => x < 5),
+ *     skipEvery(2),
  * )
  * .subscribe(x => console.log(x)); // -> 3, 6, 9
  * ```
  *
  * @param {number} gap A number stating number of emissions to skip.
  * @return {Observable} An Observable of relevant emission after skips.
- * @name some
+ * @name skipEvery
  */
 export function skipEvery<T>(gap: number): OperatorFunction<T, T> {
   return (source: Observable<T>) => source.lift(new SkipEveryOperator(gap));
