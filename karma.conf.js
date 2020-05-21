@@ -5,7 +5,8 @@ module.exports = (config) => {
         plugins: [
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
-            require('karma-typescript')
+            require('karma-typescript'),
+            require('karma-jasmine-html-reporter'),
         ],
         client: {
             clearContext: false, // leave Jasmine Spec Runner output visible in browser
@@ -13,7 +14,7 @@ module.exports = (config) => {
                 random: false
             }
         },
-        reporters: ['progress', "karma-typescript"],
+        reporters: ['progress', 'kjhtml'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
@@ -24,13 +25,13 @@ module.exports = (config) => {
             'src/**/*.ts'
         ],
         preprocessors: {
-            "**/*.ts": "karma-typescript"
+            '**/*.ts': 'karma-typescript'
         },
         karmaTypescriptConfig: {
             compilerOptions: {
-                module: "commonjs"
+                module: 'commonjs'
             },
-            tsconfig: "./tsconfig.json",
+            tsconfig: './tsconfig.json',
         },
     });
 };
