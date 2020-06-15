@@ -14,10 +14,11 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
+      "rxjs-complementary": ["./src/index"],
       "rxjs-complementary/operators": ["./src/operators/index"]
     }
   },
-  "exclude": [],
+  "exclude": ["node_modules"],
   "include": [
     "src/**/*.ts"
   ]
