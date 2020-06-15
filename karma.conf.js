@@ -19,8 +19,14 @@ module.exports = (config) => {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Chrome'],
-        singleRun: false,
+        browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
+        customLaunchers: {
+          ChromeHeadlessNoSandbox: {
+            base: 'ChromeHeadless',
+            flags: ['--no-sandbox']
+          }
+        },
+        singleRun: true,
         files: [
             'src/**/*.ts'
         ],
