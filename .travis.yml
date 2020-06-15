@@ -1,8 +1,13 @@
 language: node_js
+node__js:
+  - "10.15.3"
 
 branches:
   only:
   - master
+
+before_install:
+  - npm i -g npm@6.4.1
 
 script:
   - npm run lint
@@ -10,4 +15,6 @@ script:
   - npm run test
 
 cache:
-  directories: node_modules
+  directories:
+    - node_modules
+  npm: true
