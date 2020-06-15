@@ -17,6 +17,9 @@ script:
 addons:
   chrome: stable
 
+after_success:
+  - npm run report-coverage
+
 cache:
   directories:
     - node_modules
