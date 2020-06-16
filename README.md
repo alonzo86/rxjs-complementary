@@ -6,3 +6,9 @@ Complementary package for rxjs
 [![CodeFactor Grade](https://www.codefactor.io/repository/github/alonzo86/rxjs-complementary/badge)](https://www.codefactor.io/repository/github/alonzo86/rxjs-complementary)
 ![npm version](https://img.shields.io/npm/v/rxjs-complementary)
 ![npm downloads](https://img.shields.io/npm/dw/rxjs-complementary)
+
+## Getting Started
+
+```bash
+npm i rxjs-complementary
+```

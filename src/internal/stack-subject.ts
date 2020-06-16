@@ -18,11 +18,6 @@ export class StackSubject<T> extends BehaviorSubject<T> {
     }
 
     getValue(): T {
-        try {
-            super.getValue();
-        } catch (e) {
-            throw e;
-        }
         return this._stack.peek();
     }
 
@@ -36,8 +31,8 @@ export class StackSubject<T> extends BehaviorSubject<T> {
         try {
             do {
                 value = this._stack.pop();
-            } while (count--);
-            this.next(value);
+            } while (--count);
+            super.next(value);
         } catch (e) {
             throw e;
         }

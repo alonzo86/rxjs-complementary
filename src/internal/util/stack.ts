@@ -22,6 +22,9 @@ export class Stack<T> {
     }
 
     public pop(): T {
+        if (this.size === 0) {
+            throw new StackIsEmptyError();
+        }
         return this.stack.pop()!;
     }
 

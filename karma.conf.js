@@ -38,7 +38,8 @@ module.exports = (config) => {
         },
         karmaTypescriptConfig: {
             compilerOptions: {
-                module: 'commonjs'
+                module: 'commonjs',
+                sourceMap: true
             },
             tsconfig: './tsconfig.json',
         },
